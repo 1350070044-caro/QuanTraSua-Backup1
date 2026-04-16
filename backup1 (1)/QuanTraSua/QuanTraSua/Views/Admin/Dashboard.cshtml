@@ -1,0 +1,28 @@
+@model IEnumerable<QuanTraSua.Models.Order>
+
+@{
+    ViewData["Title"] = "Doanh thu - Admin";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-uppercase" style="color: #5d4037;"> Doanh Thu</h2>
+        <a href="/Admin/Logout" class="btn btn-outline-danger">Đăng xuất</a>
+    </div>
+    <!-- rest of the dashboard content as before -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm rounded-4 bg-primary text-white p-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-uppercase opacity-75 small">Tổng đơn hàng</h6>
+                        <h2 class="fw-bold mb-0">@ViewBag.TotalOrders</h2>
+                    </div>
+                    <i class="bi bi-cart-check fs-1 opacity-50"></i>
+                </div>
+            </div>
+        </div>
+        <!-- other cards and table as in original AdminDashboard.cshtml -->
+    </div>
+    <!-- table code as original -->
+</div>
